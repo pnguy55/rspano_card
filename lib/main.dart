@@ -28,60 +28,54 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('assets/rhett.jpg'),
               ),
               Image.asset('assets/rhett-logo.jpg', height: 80.0),
-              Container(
-                  width: 250.0,
-                  color: Colors.black,
-                  margin:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  padding: EdgeInsets.all(10.0),
-                  child: Card(
-                    child: InkWell(
-                      onTap: () =>
-                          launch('mailto:https://rhettspanolaw.com/contact/'),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          Icon(Icons.mail, color: Colors.white),
-                          SizedBox(
-                            width: 15.0,
-                          ),
-                          Text(
-                            'Email Me',
-                            style: TextStyle(
-                              fontFamily: 'Quicksand',
-                              fontSize: 25.0,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )),
-              Container(
-                width: 250.0,
+              Divider(
                 color: Colors.black,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: InkWell(
-                  onTap: () => launch('tel:2253878327'),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Container(margin: EdgeInsets.only(left: 5.0)),
-                      Icon(Icons.phone, color: Colors.white),
-                      SizedBox(
-                        width: 15.0,
-                      ),
-                      Text(
-                        '(225) 387-8327',
+                height: 25.0,
+                thickness: 2.0,
+                indent: 75,
+                endIndent: 75,
+              ),
+              Card(
+                color: Colors.black,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 35.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: InkWell(
+                    onTap: () => launch('https://rhettspanolaw.com/contact/'),
+                    child: ListTile(
+                      leading: Icon(Icons.email, color: Colors.white),
+                      title: Text(
+                        'Email Me',
                         style: TextStyle(
                           fontFamily: 'Quicksand',
                           fontSize: 25.0,
                           color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Container(margin: EdgeInsets.only(right: 5.0)),
-                    ],
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.black,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 35.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: InkWell(
+                    onTap: () => launch('tel:2253878327'),
+                    child: ListTile(
+                      leading: Icon(Icons.phone, color: Colors.white),
+                      title: Text(
+                        '(225) 387-8327)',
+                        style: TextStyle(
+                          fontFamily: 'Quicksand',
+                          fontSize: 25.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
